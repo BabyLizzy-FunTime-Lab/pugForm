@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	head
+		title frontpage
+		meta(charset="utf-8")
+		link(rel='stylesheet', type="text/css", href="/style/frontpageStyle.css")
+		script(type='text/javascript' src='/JS/getServerTime.js')
+	body
+		h1 Wierd Fanclub
+		#formContainer
+			form(method='POST' action='/register')
+				div.form-element
+					label(for='name') Name:
+					input#name.form-input(type='text', placeholder='First Name', name='name')
+		h2 Serverside time.
+		#serverTime
+
+
+
