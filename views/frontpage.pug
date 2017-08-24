@@ -9,36 +9,18 @@ html(lang="en")
 		#page
 			h1 Wierd Fanclub
 			//- here is need a login
-			
-			//- This needs to be an extend
-			#formContainer
-				h3 Register form
-				form(method='POST' action='/register')
-					div.form-element
-						label(for='name') Name
-						div
-							input#name.form-input(type='text', placeholder='Enter Firstname', name='name')
-					div.form-element
-						label(for='lastname') Lastname
-						div
-							input#lastname.form-input(type='text', placeholder='Enter Lastname', name='lastname')
-					div.form-element
-						label(for='email') e-Mail
-						div
-							input#lastname.form-input(type='email', placeholder='Enter your email', name='email')
-					div.form-element
-						label(for='username') Username
-						div
-							input#username.form-input(type='text', placeholder='Enter Username', name='username')
-					div.form-element
-						label(for='password') Password
-						div
-							input#password.form-input(type='password', placeholder='Enter password', name='password')
-					div.form-element
-						label(for='password-confirm') Password-Confirm
-						div
-							input#passwordConf.form-input(type='password', placeholder='Enter password', name='password')
-					button(type='submit') Sign up
+			h2 Login
+			form(method='POST' action='/login')
+				div.form-login
+						input#registerdUsername(type='text', placeholder='Username', name='registerd-username')
+				div.form-login
+						input#registerdPassword(type='password', placeholder='Password', name='registerd-password')
+				button(type="submit") Sign in
+			hr
+			form(method='GET', action='/requestform')
+				button(type="submit") Register Now
+			block content
+			hr
 			h2 Serverside time.
 			#serverTime
 
