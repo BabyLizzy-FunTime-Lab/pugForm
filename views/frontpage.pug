@@ -23,6 +23,13 @@ html(lang="en")
 			hr
 			h2 Serverside time.
 			#serverTime
+			hr
+			#sup Sup
+				form(id="greetingForm")
+					div.form-greeting
+							input#greetingInput(type='text', placeholder='Say hi to server', name='hiServer') 
+					button#submitBtn(type="submit") Sup
+			//- method='POST' action='/sup'
 
 
 
